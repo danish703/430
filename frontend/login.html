@@ -1,0 +1,35 @@
+{% extends 'master/base.html' %}
+
+{% block 'content' %}
+  <div class="container">
+     <div class="row justify-content-md-center">
+        <div class="col-8">
+           <div class="card">
+              <div class="card-header">
+                Login
+              </div>
+              <div class="card-body">
+
+
+            <form method="post">
+                 <div class="form-group">
+                   <label for="exampleInputEmail1">Username</label>
+                   <input type="text" name="username" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                 </div>
+                {% csrf_token %}
+               <div class="form-group">
+                   <label for="exampleInputEmail1">Password</label>
+                   <input type="password" name="pass" class="form-control" id="pass1" aria-describedby="emailHelp">
+                 </div>
+
+               <hr/>
+               <button type="submit" style="float:right;" class="btn btn-success">Login</button>
+            </form>
+              </div>
+            </div>
+
+
+        </div>
+     </div>
+  </div>
+{% endblock %}
